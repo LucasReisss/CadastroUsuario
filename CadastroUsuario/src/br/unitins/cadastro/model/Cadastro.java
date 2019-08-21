@@ -9,7 +9,7 @@ public class Cadastro {
 	private Boolean ativo = Boolean.TRUE;
 
 	public void limpar() {
-		
+
 	}
 
 	public String getNome() {

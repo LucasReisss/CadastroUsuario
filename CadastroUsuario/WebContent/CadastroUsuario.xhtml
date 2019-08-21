@@ -4,22 +4,25 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html">
 <h:head>
 	<title>Cadastro</title>
-	<meta charset="utf-8"/>
-	<h:outputStylesheet library="css" name="style.css"/>
+	<meta charset="utf-8" />
+	<h:outputStylesheet library="css" name="style.css" />
 </h:head>
-<h:body class= "body">
+<h:body class="body">
 	<h:messages style="color:red;margin:8px;" />
 	<h1>Cadastro</h1>
-	<h:form class = "form">
+	<h:form class="form">
 		<h:panelGrid columns="2">
 			<h:outputLabel value="Nome: " />
-			<h:inputText value="#{cadastroUsuarioController.cadastro.nome}" style="background: #ffffff; border-radius: 5px;" />
+			<h:inputText value="#{cadastroUsuarioController.cadastro.nome}"
+				style="background: #ffffff; border-radius: 5px;" />
 
 			<h:outputLabel value="Login: " />
-			<h:inputText value="#{cadastroUsuarioController.cadastro.login}" style="background: #ffffff; border-radius: 5px;" />
+			<h:inputText value="#{cadastroUsuarioController.cadastro.login}"
+				style="background: #ffffff; border-radius: 5px;" />
 
 			<h:outputLabel value="Senha: " />
-			<h:inputSecret value="#{cadastroUsuarioController.cadastro.senha}" style="background: #ffffff; border-radius: 5px;" />
+			<h:inputSecret value="#{cadastroUsuarioController.cadastro.senha}"
+				style="background: #ffffff; border-radius: 5px;" />
 		</h:panelGrid>
 
 		<h:panelGrid columns="1">
@@ -29,11 +32,14 @@
 		</h:panelGrid>
 
 		<h:panelGrid columns="4">
-			<h:commandButton value="Incluir"  class="button" />
-			<h:commandButton value="Alterar"  class="button"/>
-			<h:commandButton value="Excluir"  class="button"/>
+			<h:commandButton value="Incluir"
+				actionListener="#{cadastroUsuarioController.inserirDados()}"
+				class="button" />
+			<h:commandButton value="Alterar" class="button" />
+			<h:commandButton value="Excluir" class="button" />
 			<h:commandButton value="Limpar"
-				actionListener="#{loginController.limpar()}" class="button" />
+				actionListener="#{cadastroUsuarioController.limpar()}"
+				class="button" />
 		</h:panelGrid>
 
 	</h:form>
